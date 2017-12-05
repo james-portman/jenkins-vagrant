@@ -1,2 +1,10 @@
+This is a Vagrant/Ansible bundle for starting a Jenkins server
+
+To use it you should have Vagrant and VirtualBox installed, and run the following:
+$ vagrant up
+
+Once complete, Jenkins should be accessible on the address: http://localhost:8080
+The default username and password are admin and admin.
+
 See Ansible galaxy module page for settings:
 https://galaxy.ansible.com/geerlingguy/jenkins/
