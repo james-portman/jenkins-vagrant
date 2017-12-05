@@ -1,0 +1,15 @@
+---
+- hosts: jenkins
+  become: true
+  environment:
+    http_proxy: "{{ lookup('env','http_proxy') }}"
+    https_proxy: "{{ lookup('env','https_proxy') }}"
+    no_proxy: "127.0.0.1, localhost"
+  vars:
+    jenkins_version: "2.93"
+    jenkins_admin_username: admin
+    jenkins_admin_password: admin
+    jenkins_plugins:
+      - greenballs
+  roles:
+    - geerlingguy.jenkins
